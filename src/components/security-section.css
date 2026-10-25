@@ -1,0 +1,91 @@
+.pagi-security {
+  /* Type sizes specific to Figma node 39:150. */
+  --pagi-security-heading-size: 48px;
+  --pagi-security-description-size: 20px;
+  --pagi-security-detail-title-size: 23px;
+  width: 100%;
+  padding-block: calc(var(--space500) * 2);
+  padding-inline: max(var(--layout-web-mobile-margin), calc((100% - var(--layout-web-content-max)) / 2));
+  background: var(--pagi-color-bg-inverse);
+  color: var(--pagi-color-text-inverse);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+.pagi-security-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space400);
+  max-width: var(--layout-web-content-max);
+  margin-inline: auto;
+}
+
+.pagi-security-title {
+  margin: 0;
+  font-size: var(--pagi-security-heading-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.pagi-security-title span { display: block; }
+
+.pagi-security-description {
+  max-width: 740px;
+  margin: 0;
+  font-size: var(--pagi-security-description-size);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+.pagi-security-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 440px));
+  align-items: start;
+  gap: var(--space400);
+}
+
+.pagi-security-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space150);
+  min-width: 0;
+}
+
+.pagi-security-detail-title {
+  margin: 0;
+  font-size: var(--pagi-security-detail-title-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: 1.45;
+}
+
+.pagi-security-detail-description {
+  margin: 0;
+  font-size: var(--md-sys-typescale-body-large-size);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+@media (max-width: 1199px) {
+  .pagi-security { padding-inline: var(--layout-web-tablet-margin); }
+}
+
+@media (max-width: 899px) {
+  .pagi-security-details { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 599px) {
+  .pagi-security {
+    padding: var(--space600) var(--layout-web-mobile-margin);
+  }
+  .pagi-security-title {
+    font-size: clamp(var(--md-sys-typescale-headline-medium-size), 7.5vw, var(--md-sys-typescale-display-small-size));
+  }
+  .pagi-security-description {
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    letter-spacing: var(--md-sys-typescale-body-large-tracking);
+  }
+  .pagi-security-detail-title {
+    font-size: var(--md-sys-typescale-title-large-size);
+  }
+}

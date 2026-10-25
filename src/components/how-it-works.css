@@ -1,0 +1,90 @@
+.pagi-how-it-works {
+  /* Section-specific type sizes from Figma node 39:135. */
+  --pagi-how-it-works-heading-size: 48px;
+  --pagi-how-it-works-number-size: 40px;
+  width: 100%;
+  padding-block: calc(var(--space500) * 2);
+  padding-inline: max(var(--layout-web-mobile-margin), calc((100% - var(--layout-web-content-max)) / 2));
+  background: var(--pagi-color-bg-subtle);
+  color: var(--pagi-color-text-primary);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+.pagi-how-it-works-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space400);
+  max-width: var(--layout-web-content-max);
+  margin-inline: auto;
+}
+
+.pagi-how-it-works-title {
+  margin: 0;
+  font-size: var(--pagi-how-it-works-heading-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.pagi-how-it-works-title span { display: block; }
+
+.pagi-how-it-works-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--space400);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagi-how-it-works-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space200);
+  min-width: 0;
+}
+
+.pagi-how-it-works-number {
+  margin: 0;
+  color: var(--pagi-color-text-brand);
+  font-size: var(--pagi-how-it-works-number-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: 1.08;
+}
+
+.pagi-how-it-works-step-title {
+  margin: 0;
+  font-size: var(--md-sys-typescale-headline-small-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: 1.45;
+}
+
+.pagi-how-it-works-description {
+  margin: 0;
+  color: var(--pagi-color-text-secondary);
+  font-size: var(--md-sys-typescale-body-large-size);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+@media (max-width: 1199px) {
+  .pagi-how-it-works { padding-inline: var(--layout-web-tablet-margin); }
+}
+
+@media (max-width: 899px) {
+  .pagi-how-it-works-steps { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 599px) {
+  .pagi-how-it-works {
+    padding: var(--space600) var(--layout-web-mobile-margin);
+  }
+  .pagi-how-it-works-title {
+    font-size: clamp(var(--md-sys-typescale-headline-medium-size), 7.5vw, var(--md-sys-typescale-display-small-size));
+  }
+  .pagi-how-it-works-step-title {
+    font-size: var(--md-sys-typescale-title-large-size);
+  }
+}

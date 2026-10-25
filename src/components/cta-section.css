@@ -1,0 +1,85 @@
+.pagi-cta-section {
+  /* Type sizes specific to Figma node 39:171. */
+  --pagi-cta-heading-size: 56px;
+  --pagi-cta-description-size: 18px;
+  width: 100%;
+  padding-block: calc(var(--space500) * 2);
+  padding-inline: max(var(--layout-web-mobile-margin), calc((100% - var(--layout-web-content-max)) / 2));
+  background: var(--pagi-color-bg-subtle);
+  color: var(--pagi-color-text-primary);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+.pagi-cta-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space300);
+  max-width: var(--layout-web-content-max);
+  margin-inline: auto;
+}
+
+.pagi-cta-section-title {
+  margin: 0;
+  font-size: var(--pagi-cta-heading-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.pagi-cta-section-title span { display: block; }
+
+.pagi-cta-section-description {
+  max-width: 680px;
+  margin: 0;
+  color: var(--pagi-color-text-secondary);
+  font-size: var(--pagi-cta-description-size);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+.pagi-cta-section-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space100);
+  width: 200px;
+  max-width: 100%;
+  min-height: var(--pagi-size-62);
+  padding: var(--space200);
+  /* This CTA uses a pill shape in Figma. */
+  border-radius: var(--pagi-radius-full);
+  background: var(--pagi-color-bg-brand);
+  color: var(--pagi-color-text-primary);
+  font-size: var(--md-sys-typescale-title-small-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: var(--md-sys-typescale-title-small-line-height);
+  letter-spacing: var(--md-sys-typescale-title-small-tracking);
+  text-align: center;
+  text-decoration: none;
+}
+
+.pagi-cta-section-button:hover { background: var(--pagi-brand-orange-alt); }
+
+.pagi-cta-section-button:focus-visible {
+  outline: 2px solid var(--pagi-color-border-focus);
+  outline-offset: var(--space50);
+}
+
+@media (max-width: 1199px) {
+  .pagi-cta-section { padding-inline: var(--layout-web-tablet-margin); }
+}
+
+@media (max-width: 599px) {
+  .pagi-cta-section {
+    padding: var(--space600) var(--layout-web-mobile-margin);
+  }
+  .pagi-cta-section-title {
+    font-size: clamp(var(--md-sys-typescale-headline-medium-size), 7.5vw, var(--md-sys-typescale-display-small-size));
+  }
+  .pagi-cta-section-description {
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    letter-spacing: var(--md-sys-typescale-body-large-tracking);
+  }
+}

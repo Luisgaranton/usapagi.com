@@ -65,7 +65,7 @@ export default function Topbar({
   );
 
   return (
-    <header className="pagi-topbar">
+    <header id="inicio" className="pagi-topbar">
       {homeHref ? (
         <Link href={homeHref} className="pagi-topbar-brand" aria-label="PAGI — Inicio">
           {logo}
