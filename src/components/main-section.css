@@ -1,0 +1,214 @@
+.pagi-main-section {
+  /* Hero-specific measurements from Figma, beyond the shared type scale. */
+  --pagi-hero-title-size: 80px;
+  --pagi-hero-title-leading: 1.08;
+  --pagi-hero-description-size: 20px;
+  --pagi-hero-card-title-size: 17px;
+  --pagi-hero-note-size: 13px;
+  width: 100%;
+  padding-block: var(--space450) calc(var(--space500) * 2);
+  padding-inline: max(var(--layout-web-mobile-margin), calc((100% - var(--layout-web-content-max)) / 2));
+  background: var(--pagi-color-bg-canvas);
+  color: var(--pagi-color-text-primary);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+.pagi-main-section-content {
+  display: grid;
+  grid-template-columns: minmax(0, 600fr) minmax(0, 552fr);
+  align-items: center;
+  gap: var(--space600);
+  max-width: var(--layout-web-content-max);
+  margin-inline: auto;
+}
+
+.pagi-main-section-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space300);
+  min-width: 0;
+}
+
+.pagi-main-section-eyebrow {
+  width: 208px;
+  max-width: 100%;
+  margin: 0;
+  padding: var(--space125);
+  border-radius: var(--pagi-radius-32);
+  background: var(--pagi-color-bg-subtle);
+  font-size: var(--md-sys-typescale-label-small-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: 1.45;
+}
+
+.pagi-main-section-title {
+  margin: 0;
+  font-size: var(--pagi-hero-title-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: var(--pagi-hero-title-leading);
+  letter-spacing: 0;
+}
+
+.pagi-main-section-title span { display: block; }
+
+.pagi-main-section-description,
+.pagi-main-section-note {
+  width: 100%;
+  max-width: 520px;
+  margin: 0;
+  color: var(--pagi-color-text-secondary);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+.pagi-main-section-description { font-size: var(--pagi-hero-description-size); }
+
+.pagi-main-section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space150);
+  width: 100%;
+  max-width: 520px;
+}
+
+.pagi-main-section-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 218px;
+  min-height: var(--pagi-size-62);
+  padding: var(--space200);
+  border: 1px solid transparent;
+  /* The hero in Figma uses pill buttons. */
+  border-radius: var(--pagi-radius-full);
+  background: var(--pagi-color-bg-brand);
+  color: var(--pagi-color-text-primary);
+  font-family: inherit;
+  font-size: var(--md-sys-typescale-title-small-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: var(--md-sys-typescale-title-small-line-height);
+  letter-spacing: var(--md-sys-typescale-title-small-tracking);
+  text-align: center;
+  text-decoration: none;
+}
+
+.pagi-main-section-button-secondary {
+  width: 192px;
+  border-color: var(--pagi-color-border-default);
+  background: var(--pagi-color-bg-surface);
+}
+
+.pagi-main-section-button[href]:hover { background: var(--pagi-brand-orange-alt); }
+.pagi-main-section-button-secondary[href]:hover { background: var(--pagi-color-bg-subtle); }
+.pagi-main-section-button:focus-visible {
+  outline: 2px solid var(--pagi-color-border-focus);
+  outline-offset: var(--space50);
+}
+.pagi-main-section-note { font-size: var(--pagi-hero-note-size); }
+
+.pagi-main-section-product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space300);
+  min-width: 0;
+  padding: var(--space400);
+  border-radius: var(--pagi-radius-32);
+  background: var(--pagi-color-bg-subtle);
+}
+
+.pagi-main-section-phone-space {
+  flex: 0 1 237.9px;
+  height: 514.84px;
+  min-width: 0;
+}
+
+.pagi-main-section-detail {
+  display: flex;
+  flex: 0 0 194px;
+  flex-direction: column;
+  gap: var(--space300);
+  min-width: 0;
+}
+
+.pagi-main-section-detail-title {
+  margin: 0;
+  font-size: var(--md-sys-typescale-headline-medium-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: 1.45;
+}
+
+.pagi-main-section-detail-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space100);
+  padding: var(--space200);
+  border-radius: var(--pagi-radius-16);
+  background: var(--pagi-color-bg-surface);
+}
+
+.pagi-main-section-card-title {
+  margin: 0;
+  font-size: var(--pagi-hero-card-title-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: 1.45;
+}
+
+.pagi-main-section-card-caption {
+  margin: 0;
+  color: var(--pagi-color-text-secondary);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+@media (max-width: 1199px) {
+  .pagi-main-section { padding-inline: var(--layout-web-tablet-margin); }
+  .pagi-main-section-content { gap: var(--space400); }
+  .pagi-main-section-title { font-size: var(--md-sys-typescale-display-large-size); }
+  .pagi-main-section-detail { flex-basis: 162px; }
+  .pagi-main-section-product { padding: var(--space300); }
+}
+
+@media (max-width: 899px) {
+  .pagi-main-section-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space500);
+    max-width: 600px;
+  }
+  .pagi-main-section-product {
+    width: 100%;
+    max-width: 552px;
+    justify-self: center;
+  }
+  .pagi-main-section-detail { flex-basis: 194px; }
+}
+
+@media (max-width: 599px) {
+  .pagi-main-section {
+    padding: var(--space300) var(--layout-web-mobile-margin) var(--space600);
+  }
+  .pagi-main-section-title {
+    font-size: clamp(var(--md-sys-typescale-display-small-size), 10vw, var(--md-sys-typescale-display-large-size));
+  }
+  .pagi-main-section-description {
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    letter-spacing: var(--md-sys-typescale-body-large-tracking);
+  }
+  .pagi-main-section-button { width: 100%; }
+  .pagi-main-section-product {
+    gap: var(--space200);
+    padding: var(--space200);
+  }
+  .pagi-main-section-phone-space { flex: 1 1 0; height: 360px; }
+  .pagi-main-section-detail { flex: 0 1 162px; gap: var(--space200); }
+  .pagi-main-section-detail-title { font-size: var(--md-sys-typescale-title-large-size); }
+  .pagi-main-section-card-title {
+    font-size: var(--md-sys-typescale-title-small-size);
+    line-height: var(--md-sys-typescale-title-small-line-height);
+    letter-spacing: var(--md-sys-typescale-title-small-tracking);
+  }
+}

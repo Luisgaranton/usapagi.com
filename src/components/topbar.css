@@ -1,0 +1,157 @@
+.pagi-topbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space300);
+  width: 100%;
+  min-height: 126px;
+  padding-block: var(--space400);
+  padding-inline: max(var(--layout-web-mobile-margin), calc((100% - var(--layout-web-content-max)) / 2));
+  background: var(--pagi-color-bg-canvas);
+  color: var(--pagi-color-text-primary);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+.pagi-topbar-brand {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  gap: 9.362px;
+  width: 105.996px;
+  min-height: 36.173px;
+}
+
+.pagi-topbar-symbol {
+  display: block;
+  width: 33.138px;
+  height: auto;
+}
+
+.pagi-topbar-wordmark {
+  display: block;
+  width: 63.496px;
+  height: auto;
+  margin-top: 3.94px;
+}
+
+.pagi-topbar-navigation {
+  display: flex;
+  flex: 0 0 540px;
+  align-items: flex-start;
+  gap: var(--space400);
+}
+
+.pagi-topbar-nav-link,
+.pagi-topbar-menu-toggle {
+  font-size: var(--md-sys-typescale-label-large-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: 1.45;
+  color: var(--pagi-color-text-primary);
+  text-decoration: none;
+}
+
+.pagi-topbar-navigation .pagi-topbar-nav-link {
+  flex: 0 0 126px;
+}
+
+.pagi-topbar-navigation .pagi-topbar-nav-link:last-child {
+  flex-basis: 150px;
+}
+
+.pagi-topbar-cta {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space100);
+  width: 156px;
+  min-height: var(--pagi-size-62);
+  padding: var(--space200);
+  border: 0;
+  /* This specific Figma topbar uses a pill CTA. */
+  border-radius: var(--pagi-radius-full);
+  background: var(--pagi-color-bg-brand);
+  color: var(--pagi-color-text-primary);
+  font-size: var(--md-sys-typescale-title-small-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: var(--md-sys-typescale-title-small-line-height);
+  letter-spacing: var(--md-sys-typescale-title-small-tracking);
+  text-align: center;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.pagi-topbar-nav-link[href]:hover {
+  text-decoration: underline;
+  text-underline-offset: var(--space50);
+}
+
+.pagi-topbar-cta:not(:disabled):hover {
+  background: var(--pagi-brand-orange-alt);
+}
+
+.pagi-topbar a:focus-visible,
+.pagi-topbar-menu-toggle:focus-visible {
+  outline: 2px solid var(--pagi-color-border-focus);
+  outline-offset: var(--space50);
+}
+
+.pagi-topbar-mobile-menu {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .pagi-topbar {
+    min-height: 100px;
+    padding: var(--space400) var(--layout-web-tablet-margin);
+  }
+
+  .pagi-topbar-navigation,
+  .pagi-topbar > .pagi-topbar-cta {
+    display: none;
+  }
+
+  .pagi-topbar-mobile-menu {
+    display: block;
+  }
+
+  .pagi-topbar-menu-toggle {
+    padding: var(--space150);
+    cursor: pointer;
+  }
+
+  .pagi-topbar-mobile-navigation {
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space100);
+    padding: var(--space200) var(--layout-web-tablet-margin) var(--space300);
+    border-bottom: 1px solid var(--pagi-color-border-default);
+    background: var(--pagi-color-bg-surface);
+  }
+
+  .pagi-topbar-mobile-navigation .pagi-topbar-nav-link {
+    padding-block: var(--space150);
+  }
+
+  .pagi-topbar-mobile-navigation .pagi-topbar-cta {
+    width: 100%;
+    margin-top: var(--space100);
+  }
+}
+
+@media (max-width: 599px) {
+  .pagi-topbar {
+    padding-inline: var(--layout-web-mobile-margin);
+  }
+
+  .pagi-topbar-mobile-navigation {
+    padding-inline: var(--layout-web-mobile-margin);
+  }
+}
