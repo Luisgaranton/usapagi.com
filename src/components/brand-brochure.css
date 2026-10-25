@@ -1,0 +1,104 @@
+.pagi-benefits {
+  /* Typography specific to Figma node 39:113. */
+  --pagi-benefits-heading-size: 48px;
+  --pagi-benefits-description-size: 18px;
+  --pagi-benefits-card-title-size: 23px;
+  width: 100%;
+  padding-block: calc(var(--space500) * 2);
+  padding-inline: max(var(--layout-web-mobile-margin), calc((100% - var(--layout-web-content-max)) / 2));
+  background: var(--pagi-color-bg-canvas);
+  color: var(--pagi-color-text-primary);
+  font-family: var(--font-plus-jakarta-sans), sans-serif;
+}
+
+.pagi-benefits-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space400);
+  max-width: var(--layout-web-content-max);
+  margin-inline: auto;
+}
+
+.pagi-benefits-title {
+  margin: 0;
+  font-size: var(--pagi-benefits-heading-size);
+  font-weight: var(--typography-weight-medium);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.pagi-benefits-title span { display: block; }
+
+.pagi-benefits-description {
+  margin: 0;
+  color: var(--pagi-color-text-secondary);
+  font-size: var(--pagi-benefits-description-size);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+.pagi-benefits-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--space200);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagi-benefits-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space250);
+  min-width: 0;
+  padding: var(--space300);
+  border: 1px solid var(--pagi-color-border-default);
+  border-radius: var(--pagi-radius-20);
+  background: var(--pagi-color-bg-surface);
+}
+
+.pagi-benefits-card img { flex-shrink: 0; }
+
+.pagi-benefits-card-title {
+  margin: 0;
+  font-size: var(--pagi-benefits-card-title-size);
+  font-weight: var(--typography-weight-semibold);
+  line-height: 1.45;
+}
+
+.pagi-benefits-card-description {
+  margin: 0;
+  color: var(--pagi-color-text-secondary);
+  font-size: var(--md-sys-typescale-body-large-size);
+  font-weight: var(--typography-weight-regular);
+  line-height: 1.45;
+}
+
+@media (max-width: 1199px) {
+  .pagi-benefits { padding-inline: var(--layout-web-tablet-margin); }
+}
+
+@media (max-width: 899px) {
+  .pagi-benefits-cards { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 599px) {
+  .pagi-benefits {
+    padding: var(--space600) var(--layout-web-mobile-margin);
+  }
+  .pagi-benefits-content { gap: var(--space300); }
+  .pagi-benefits-title {
+    font-size: clamp(var(--md-sys-typescale-headline-medium-size), 7.5vw, var(--md-sys-typescale-display-small-size));
+  }
+  .pagi-benefits-description {
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    letter-spacing: var(--md-sys-typescale-body-large-tracking);
+  }
+  .pagi-benefits-card-title {
+    font-size: var(--md-sys-typescale-title-large-size);
+  }
+}

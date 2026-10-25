@@ -1,4 +1,5 @@
 import MainSection from "@/components/main-section";
+import BrandBrochure from "@/components/brand-brochure";
 import Topbar from "@/components/topbar";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <Topbar />
       <main>
         <MainSection />
+        <BrandBrochure />
       </main>
     </>
   );
